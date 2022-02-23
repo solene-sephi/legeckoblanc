@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact</title>
+    <meta name="author" content="Solène B">
+    <meta name="description" content="Ces pages web ont pour but de m'entrainer à utiliser HTML et CSS, et met en avant le chien de la famille.">
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <div id="main_wrapper">
+        <!-- contenu commun de la page -->
+        <div id="topsection">
+            <!-- header -->
+            <header class="header">
+                <div class="header"><a href="index.html"><img src="images/logo.png" alt="logo rond orange" /></a></div>
+            </header>
+
+            <!-- barre de navigation -->
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="galerie-photo.html">Galerie photo</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- contenu unique de la page -->
+        <main>
+            <div id="mainsection">
+
+                <!-- barre latérale -->
+                <aside id="aside">
+                    <div class="arrow_up"></div>
+                    <h2>A propos de l'auteur</h2>
+                    <p><img class="displayed" src="images/token_gecko3.png" alt="token chien blanc dans l'herbe"></p>
+                    <p>Equitis Romani autem esse filium criminis loco poni ab accusatoribus neque his iudicantibus oportuit neque defendentibus nobis. Nam quod de pietate dixistis, est quidem ista nostra existimatio, sed iudicium certe parentis; quid nos opinemur, audietis ex iuratis.</p>
+                    <h2>Retrouvez-moi sur les réseaux sociaux</h2>
+                    <div class="arrow_down"></div>
+                </aside>
+                
+                <!-- main content -->                
+                <div id="maincontent">
+                    <h1>Contact</h1>
+                    <section class="fond_blanc marge_fond">
+                        <h2>Vous souhaitez faire un commentaire ?</h2>
+                        <form method="post" action="traitement.php">
+                            <p>
+                                <label class="block" for="name">Votre nom ou surnom: </label>
+                                <input type="text" name="name" id="name" size="35" maxlength="30" placeholder="Ex : Auriane la Banane" autofocus required />
+                            </p>
+                            
+                            <p>
+                                <label class="block" for="email">Votre adresse mail :</label>
+                                <input type="email" name="email" id="email" size="35" required />
+                            </p>
+                            
+                            <p>
+                                <label class="block" for="message">Quel message souhaitez-vous me faire parvenir ? </label>
+                                <textarea name="message" id="message" rows="10" cols="45" required>Vous pouvez me dire tout ce que vous voulez. Vous pouvez me faire des compliments, des remarques, me poser des questions, ou même me raconter vos vacances ou votre dernière réussite.</textarea>
+                            </p>
+                            
+                            <p>
+                                <span class="block">Voulez-vous que je vous réponde ?</span>
+                                <input type="radio" name="repondre" value="ouisvp" id="ouisvp" /><label for="ouisvp">Oui s'il vous plait</label><br />
+                                <input type="radio" name="repondre" value="ouistp" id="ouistp" /><label for="ouistp">Oui s'il te plait, et tu peux me tutoyer</label><br />                     
+                                <input type="radio" name="repondre" value="nonmerci" id="nonmerci" /><label for="nonmerci">Non, ça ira, merci</label>
+                            </p>
+                            <p>Attention, ce commentaire sera publié dans la <a href="###.html" >section commentaires de mon blog</a>.</p>
+                            <p class="flex">
+                                <input type="submit" value="Envoyer votre message" />
+                                <input type="reset" value="Annuler" />
+                            </p>
+                        </form>
+                    </section>
+                    
+
+                    <section class="fond_blanc marge_fond">
+                        <h2>Vous souhaitez faire connaissance ?</h2>
+                        <form method="post" action="traitement.php">
+                            
+                            <fieldset>
+                                <legend>Informations sur votre personne :</legend>
+                                
+                                <p>
+                                    <label class="block" for="nickname">Quel est votre surnom ?</label>
+                                    <input type="text" name="nickname" id="nickname" size="35" maxlength="30" placeholder="Ex : Solène la Baleine" required />
+                                </p>
+                                <p>
+                                    <span class="block">Quelle est la couleur de votre poil ?</span>
+                                    <input type="radio" name="cheveux" value="blanc" id="blanc" /><label for="blanc">Blanc</label><br />
+                                    <input type="radio" name="cheveux" value="noir" id="noir" /><label for="noir">Noir</label><br />
+                                    <input type="radio" name="cheveux" value="brun" id="brun" /><label for="brun">Brun</label><br />
+                                    <input type="radio" name="cheveux" value="chatain" id="chatain" /><label for="chatain">Chatain</label><br />
+                                    <input type="radio" name="cheveux" value="blond" id="blond" /><label for="blond">Blond</label><br />
+                                    <input type="radio" name="cheveux" value="multicolore" id="multicolore" /><label for="multicolore">Multicolore</label>
+                                </p>
+                            
+                                 <p>
+                                     <label class="block" for="age">Quel âge chien avez-vous ?</label>
+                                     <select name="age" id="age">
+                                         <option value="pasrepondreage">Je ne préfère pas répondre</option>
+                                         <optgroup label="Tout juste sorti du nid">
+                                             <option value="1an">1 an (moins de 15 ans)</option>
+                                             <option value="2ans">2 ans (15-24 ans)</option>
+                                             <option value="3ans">3 ans (24-28 ans)</option>
+                                             <option value="4ans">4 ans (28-32 ans)</option>
+                                         </optgroup>
+                                         <optgroup label="Moyennement jeune">
+                                             <option value="5ans">5 ans (32-36 ans)</option>
+                                             <option value="6ans">6 ans (36-40 ans)</option>
+                                             <option value="7ans">7 ans (40-44 ans)</option>
+                                             <option value="8ans">8 ans (44-48 ans)</option>
+                                         </optgroup>
+                                         <optgroup label="Dans la fleur de l'âge">
+                                             <option value="9ans">9 ans (48-52 ans)</option>
+                                             <option value="10ans">10 ans (52-56 ans)</option>
+                                             <option value="11ans">11 ans (56-60 ans)</option>
+                                             <option value="12ans">12 ans (60-64 ans)</option>
+                                         </optgroup>
+                                         <optgroup label="Magnifiquement sénior">
+                                             <option value="13ans">13 ans (64-68 ans)</option>
+                                             <option value="14ans">14 ans (68-72 ans)</option>
+                                             <option value="15ans">15 ans (72-76 ans)</option>
+                                             <option value="16ans">16 ans (76-80 ans)</option>
+                                         </optgroup>
+                                     </select>
+                                </p>                                
+                            </fieldset>
+                            
+                            <fieldset>
+                                <legend>Informations sur votre personnalité :</legend>
+
+                                <p>
+                                    <label class="block" for="mood">Quel est votre degré de bonne humeur aujourd'hui ?</label>
+                                    Nul <input type="range" name="mood" id="mood" min="0" max="10" /> Excellent
+                                </p>
+                            
+                                <p>
+                                    <label class="block" for="age">Combien de doigts avez-vous ?</label>
+                                    <input type="number" name="age" id="age" min="1" max="20" />
+                                </p>   
+
+                                <p>
+                                    <label class="block" for="continent">Sur quel continent aimeriez-vous habiter ?</label>
+                                    <select name="continent" id="continent">
+                                        <option value="europe">Europe</option>
+                                        <option value="asie">Asie</option>
+                                        <option value="afrique">Afrique</option>
+                                        <option value="oceanie">Océanie</option>
+                                        <option value="amerique">Amérique</option>
+                                    </select>
+
+                                </p>
+
+                                <p>
+                                    <span class="block">Quels plats aimez-vous dans cette liste ? <span class="italic">(plusieurs réponses possibles)</span></span>
+                                    <input type="checkbox" name="frites" id="frites" /><label for="frites">Frites</label><br />
+                                    <input type="checkbox" name="croutes" id="croutes" checked /><label for="croutes">Croûtes de fromage</label><br />
+                                    <input type="checkbox" name="tomates" id="tomates" /><label for="tomates">Tomates</label><br />
+                                    <input type="checkbox" name="poulet" id="poulet" /><label for="poulet">Poulet rôti</label>
+                                </p>
+                            </fieldset>
+                            
+                            <fieldset>
+                                <legend>Information vitale :</legend>
+                                <p>
+                                    <span class="block">Pensez-vous que tout ce qui va avec les pâtes va avec le riz ? <span class="italic">Par exemple, riz bolo, riz pesto, pâtes curry de crevette, pâtes blanquette de veau, etc.</span></span>
+                                    <input type="radio" name="rizpates" value="nonberk" id="nonberk" /><label for="nonberk">Non enfin, quelle idée, berk</label><br />
+                                    <input type="radio" name="rizpates" value="ouimiam" id="ouimiam" /><label for="ouimiam">Oui, on n'en a jamais trop, miam</label><br />
+                                    <input type="radio"  name="rizpates" value="pasrepondrerizpates" id="pasrepondrerizpates" /><label for="pasrepondrerizpates">Ne se prononce pas</label>
+                                </p>
+                                <p>
+                                    <label class="block" for="commentairerizpates">Voulez-vous bien développer ?</label>
+                                    <textarea name="commentairerizpates" id="commentairerizpates" rows="10" cols="45">A vous de voir, je risque de vous juger ...</textarea>
+                                </p>
+                            </fieldset>
+                            
+                            <p class="flex">
+                                <input type="submit" value="Envoyer" />
+                                <input type="reset" value="Annuler" />
+                            </p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

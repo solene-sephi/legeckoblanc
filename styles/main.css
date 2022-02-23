@@ -1,0 +1,546 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family : 'PatrickHand';
+    src: url('fonts/PatrickHand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1rem;
+    background-color: #f8f1e5;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: justify;
+    font-family: "robotoregular", "Trebuchet MS", sans-serif;
+    color:#181818;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    color: #426e86;
+    font-family: "PatrickHand", "Trebuchet MS", sans-serif;
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    color: #2f3131;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    margin: 1rem 0 1rem 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.right {
+    text-align: right;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.blue {
+    color:#426e86;
+}
+
+.italic
+{
+    font-style: italic;
+}
+
+.displayed {
+    display: block;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+.block {
+    display: block;
+}
+
+.max_width /*pour les photos */ {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+}
+
+.max_height /*pour les photos */ {
+    max-height: 550px;
+    width: auto;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+img.floatleft {
+    width: auto;
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.stopfloat {
+    clear:both;
+}
+
+.fond_blanc {
+    padding: 1.2rem;
+    border-radius: 10px; 
+    background-color: #ffffff;
+}
+
+.marge_fond {
+    margin-bottom: 1rem;
+}
+
+/* ------------------------------------------------*/
+/* topsection */ 
+/* ------------------------------------------------*/
+
+#topsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: solid 3px #2f3131;
+    padding: 1.3rem;
+}
+
+.header {
+    flex: 1;
+}
+
+.menu {
+    flex: 4;
+}
+
+@media all and (max-width:650px) {
+    
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items:flex-end;
+    }
+    
+}
+
+
+/* ------------------------------------------------*/
+/* header */
+/* ------------------------------------------------*/
+
+div.header {
+    text-align: center;
+}
+header img {
+    height: 5rem;
+    width: auto;
+}
+
+header a:active {
+    background-color: none;
+}
+
+/* ------------------------------------------------*/
+/* menu */
+/* ------------------------------------------------*/
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-self:center;
+    padding:inherit;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+    font-family: "PatrickHand", "Trebuchet MS", sans-serif;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2f3131;
+}
+
+/* ------------------------------------------------*/
+/* mainsection */ 
+/* ------------------------------------------------*/
+
+#mainsection {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 1.8em;
+}
+
+#aside {
+    flex: 1;
+}
+
+#maincontent {
+    flex: 5;
+}
+
+@media all and (max-width:650px) {
+    #mainsection {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+/* ------------------------------------------------*/
+/* aside */
+/* ------------------------------------------------*/
+
+#aside {
+    padding: 1.2rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#aside h1,
+#aside h2 {
+    font-size: 1.6em;
+}
+
+.arrow_up /* copié collé de https://www.zendevs.xyz/comment-faire-des-triangles-css-et-des-fleches-css/ */ {
+    width: 0;
+    height: 0;
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-bottom: 20px solid #2f3131;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+}
+
+.arrow_down /* copié collé de https://www.zendevs.xyz/comment-faire-des-triangles-css-et-des-fleches-css/ */ {
+    width: 0;
+    height: 0;
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-top: 20px solid #2f3131;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* ------------------------------------------------*/
+/* liens */
+/* ------------------------------------------------*/
+a {
+    color: #426e86;
+}
+
+a:focus {
+    border: 0.5px solid;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: #f8f1e5;
+    background-color: #426e86;
+}
+
+
+/* ------------------------------------------------*/
+/* citations */
+/* ------------------------------------------------*/
+/*https://developer.mozilla.org/fr/docs/Learn/CSS/Howto/create_fancy_boxes */
+
+
+blockquote {
+    padding: 1rem;
+    border: 1px solid #426e86;
+    background-color: #f8f5f2;
+    border-radius: 30px;
+    box-shadow: 6px 7px 8px dimgray;
+}
+
+p.blockquote-author {
+    text-align: right;
+}
+
+
+/* ------------------------------------------------*/
+/* page CV */
+/* ------------------------------------------------*/
+
+#mainsectioncv {
+        margin: 1.8em;
+}
+
+#mainsectioncv li {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+}
+
+#mainsectioncv h2,
+#mainsectioncv h3 {
+    font-family: 'robotoregular';
+    color: #2f3131;
+}
+
+#mainsectioncv h2 {
+    text-decoration: underline;
+}
+
+#maincontentcv {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#gauchecv {
+    flex: 1;
+    padding: 1.2rem;
+    background-color: rgba(249, 186, 50, 0.3);
+    border-radius: 10px;
+}
+
+#photoidentite {
+    border: 8px solid #f8f1e5;
+    border-radius: 10px;
+}
+
+#droitecv {
+    flex: 4;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+#droitecv h1 {
+    font-family: 'robotoregular';
+    letter-spacing: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 10px solid rgba(249, 186, 50, 0.3);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#competences {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.2rem;
+    border-bottom: 10px solid rgba(249, 186, 50, 0.3);
+}
+
+#clientadministratif {
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+#experiences {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 1.2rem;
+}
+
+#experiences h2 {
+    text-align: center;
+}
+
+#experience1,
+#experience2,
+#experience3,
+#experience4,
+#experience5,
+#experience6 {
+    flex-direction: row;
+}
+
+.duree {
+    flex: 1;
+    margin-right: 1.3rem;
+}
+
+.emploi {
+    flex: 4;
+}
+
+
+
+/* ------------------------------------------------*/
+/* accueil blog */
+/* ------------------------------------------------*/
+
+.banniere_article {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.fond_titre {
+    background-color: rgba(47, 49, 49, 0.8);
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: 3.5rem; 
+    bottom: 0%;
+}
+
+.titre_superpose {
+    color: #f8f1e5;
+    font-family: "PatrickHand", "Trebuchet MS", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    bottom: 0%;
+    left: 10%;
+    right: 10%;
+}
+
+
+/* ------------------------------------------------*/
+/* page poème */
+/* ------------------------------------------------*/
+
+body.beach_background {
+    background-image: url(../images/background_beach.jpg);
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.poeme {
+   text-align: center;
+}
+
+div.contenu_poeme > :first-child::first-letter {
+    font: 2rem bold;
+} 
+
+.papillon {
+    bottom: 2%;
+    right: 5%;
+}
+
+
+
+/* ------------------------------------------------*/
+/* page amis animaux */
+/* ------------------------------------------------*/
+
+table {
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+
+td,
+th {
+    border: 1px solid #426e86;
+    padding: 0.5rem;
+    vertical-align: top;
+}
+
+caption {
+    padding: 0.5rem;
+    background-color: rgba(249, 186, 50, 0.3);
+}
+
+/* ------------------------------------------------*/
+/* formulaires */
+/* ------------------------------------------------*/
+/* aidé par css.mammouthland.net/formulaire-form-input-css.php */
+
+form {
+    padding: 0 1.3rem 0 1.3rem;
+}
+
+fieldset {
+    padding: 0 1.3rem 0 1.3rem;
+    margin-bottom: 1rem;
+    border: 2px solid #426e86;
+}
+
+legend {
+    color: #426e86;
+    font-weight: bold;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+input[type=text], input[type=email], input[type=number], textarea, select {
+    background-color: rgba(248, 241, 229, 0.4);
+    border: 1px solid #426e86;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #426e86 inset;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, textarea:focus, select:focus {
+    border: 1px solid #f9ba32;
+    box-shadow: 1px 1px 2px #f9ba32 inset;
+}
+
+input[type=submit], input[type=reset] {
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-color: #426e86;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #426e86;
+    margin: auto; 
+    cursor: pointer;
+}
+
+input[type=submit]:active, input[type=reset]:active {
+    box-shadow: 1px 1px 2px #426e86 inset;
+}
+
+form .block {
+    margin: 0 0 0.5rem 0;
+}
+
+
